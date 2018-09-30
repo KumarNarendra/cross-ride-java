@@ -1,89 +1,90 @@
 /**
- * 
+ *
  */
 package com.crossover.techtrial.dto;
 
+import java.util.StringJoiner;
+
 /**
  * @author crossover
- *
  */
 public class TopDriverDTO {
-  
-  /**
-   * Constructor for TopDriverDTO
-   * @param name
-   * @param email
-   * @param totalRideDurationInSeconds
-   * @param maxRideDurationInSecods
-   * @param averageDistance
-   */
-  public TopDriverDTO(String name, 
-      String email, 
-      Long totalRideDurationInSeconds,
-      Long maxRideDurationInSecods,
-      Double averageDistance) {
-    this.setName(name);
-    this.setEmail(email);
-    this.setAverageDistance(averageDistance);
-    this.setMaxRideDurationInSecods(maxRideDurationInSecods);
-    this.setTotalRideDurationInSeconds(totalRideDurationInSeconds);
-    
-  }
-  
-  public TopDriverDTO() {
-    
-  }
-  
-  private String name;
-  
-  private String email;
-  
-  private Long totalRideDurationInSeconds;
-  
-  private Long maxRideDurationInSecods;
-  
-  private Double averageDistance;
 
-  public String getName() {
-    return name;
-  }
+    /**
+     * Constructor for TopDriverDTO
+     *
+     * @param name
+     * @param email
+     * @param totalRideDurationInSeconds
+     * @param maxRideDurationInSecods
+     * @param averageDistance
+     */
+    public TopDriverDTO(String name, String email, Long totalRideDurationInSeconds, Long maxRideDurationInSecods, Double averageDistance) {
+        this.setName(name);
+        this.setEmail(email);
+        this.setAverageDistance(averageDistance);
+        this.setMaxRideDurationInSecods(maxRideDurationInSecods);
+        this.setTotalRideDurationInSeconds(totalRideDurationInSeconds);
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public TopDriverDTO() {
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    }
 
-  public Long getTotalRideDurationInSeconds() {
-    return totalRideDurationInSeconds;
-  }
+    private String name;
 
-  public void setTotalRideDurationInSeconds(Long totalRideDurationInSeconds) {
-    this.totalRideDurationInSeconds = totalRideDurationInSeconds;
-  }
+    private String email;
 
-  public Long getMaxRideDurationInSecods() {
-    return maxRideDurationInSecods;
-  }
+    private Long totalRideDurationInSeconds;
 
-  public void setMaxRideDurationInSecods(Long maxRideDurationInSecods) {
-    this.maxRideDurationInSecods = maxRideDurationInSecods;
-  }
+    private Long maxRideDurationInSecods;
 
-  public Double getAverageDistance() {
-    return averageDistance;
-  }
+    private Double averageDistance;
 
-  public void setAverageDistance(Double averageDistance) {
-    this.averageDistance = averageDistance;
-  }
-  
-  
-    
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public Long getTotalRideDurationInSeconds() {
+        return totalRideDurationInSeconds;
+    }
+
+    public void setTotalRideDurationInSeconds(Long totalRideDurationInSeconds) {
+        this.totalRideDurationInSeconds = totalRideDurationInSeconds;
+    }
+
+    public Long getMaxRideDurationInSecods() {
+        return maxRideDurationInSecods;
+    }
+
+    public void setMaxRideDurationInSecods(Long maxRideDurationInSecods) {
+        this.maxRideDurationInSecods = maxRideDurationInSecods;
+    }
+
+    public Double getAverageDistance() {
+        return averageDistance;
+    }
+
+    public void setAverageDistance(Double averageDistance) {
+        this.averageDistance = averageDistance;
+    }
+
+    @Override
+    public String toString() {
+        return new StringJoiner(", ", TopDriverDTO.class.getSimpleName() + "[", "]").add("name='" + name + "'").add("email='" + email + "'")
+                .add("totalRideDurationInSeconds=" + totalRideDurationInSeconds).add("maxRideDurationInSecods=" + maxRideDurationInSecods).add("averageDistance=" + averageDistance).toString();
+    }
 }

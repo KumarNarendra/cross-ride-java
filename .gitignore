@@ -7,3 +7,6 @@ build/*
 target/*
 **/.DS_Store
 **/.settings
+.idea/*
+classes/*
+out/*
